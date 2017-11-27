@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+#include "QMath.h"
 #include "Primes.h"
 #include "Sums.h"
 #include "Factors.h"
@@ -11,8 +12,8 @@
 using namespace QMath;
 
 int main() {
-	float output = Powers::getSqrt(5);
+	std::list<QLong> output = Primes::getPrimeFactors(600851475143);
 
-	std::cout << output << std::endl;
+	std::cout << output.back() << std::endl;
 	return 0;
 }

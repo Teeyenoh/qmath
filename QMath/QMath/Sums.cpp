@@ -3,9 +3,9 @@
 #include <iostream>
 
 namespace QMath {
-	int Sums::getSum(std::list<int> list) {
-		int out = 0;
-		for (int i : list) {
+	long Sums::getSum(std::list<long> list) {
+		long out = 0;
+		for (long i : list) {
 			out += i;
 		}
 		return out;

@@ -3,6 +3,6 @@
 namespace QMath {
 	class Sequences {
 	public:
-		static int getFibonacciNumber(int n);
+		static long getFibonacciNumber(long n);
 	};
 }

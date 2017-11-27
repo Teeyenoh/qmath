@@ -1,11 +1,11 @@
 #pragma once
 
-#include <list>
+#include "QMath.h"
 
 namespace QMath {
 	class Factors {
 	public:
-		static bool hasFactor(int n, int f);
-		static std::list<int> getAllMultiplesBelow(int n, int f);
+		static bool hasFactor(QLong n, QLong f);
+		static std::list<QLong> getAllMultiplesBelow(QLong n, QLong f);
 	};
 }

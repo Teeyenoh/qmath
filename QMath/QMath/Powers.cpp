@@ -2,13 +2,13 @@
 
 namespace QMath {
 	// Babylonian algorithm
-	float Powers::getSqrt(float n) {
-		float guess, div;
+	double Powers::getSqrt(double n) {
+		double guess;
 
-		guess = n / 2;
+		guess = n / 2; // Start by guessing half of n
 
 		for (int i = 0; i < 10; i++) {
-			guess = (guess + (n / guess)) / 2;
+			guess = (guess + (n / guess)) / 2; // For each iteration, guess between n and the last guess
 		}
 
 		return guess;

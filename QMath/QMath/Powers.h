@@ -3,6 +3,6 @@
 namespace QMath {
 	class Powers {
 	public:
-		static float getSqrt(float n);
+		static double getSqrt(double n);
 	};
 }
