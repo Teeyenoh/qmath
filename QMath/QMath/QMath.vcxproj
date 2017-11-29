@@ -134,17 +134,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Factors.h" />
+    <ClInclude Include="Palindromes.h" />
     <ClInclude Include="Powers.h" />
     <ClInclude Include="Primes.h" />
     <ClInclude Include="QMath.h" />
+    <ClInclude Include="Resistors.h" />
     <ClInclude Include="Sequences.h" />
     <ClInclude Include="Sums.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Factors.cpp" />
+    <ClCompile Include="Palindromes.cpp" />
     <ClCompile Include="Powers.cpp" />
     <ClCompile Include="Primes.cpp" />
+    <ClCompile Include="Resistors.cpp" />
     <ClCompile Include="Sequences.cpp" />
+    <ClCompile Include="QMath.cpp" />
     <ClCompile Include="Sums.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

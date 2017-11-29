@@ -9,7 +9,7 @@ namespace QMath {
 	class Primes {
 	public:
 		static bool isPrime(QLong n);
-		static QLong getPrime(int n);
+		static QLong getPrime(QLong n);
 		static std::list<QLong> getPrimeFactors(QLong n);
 	};
 }

@@ -1,8 +1,10 @@
 #pragma once
 
+#include "QMath.h"
+
 namespace QMath {
 	class Sums {
 	public:
-		static long getSum(std::list<long> list);
+		static QLong getSum(std::list<QLong> list);
 	};
 }

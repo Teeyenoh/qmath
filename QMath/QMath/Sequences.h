@@ -1,8 +1,10 @@
 #pragma once
 
+#include "QMath.h"
+
 namespace QMath {
 	class Sequences {
 	public:
-		static long getFibonacciNumber(long n);
+		static QLong getFibonacciNumber(QLong n);
 	};
 }

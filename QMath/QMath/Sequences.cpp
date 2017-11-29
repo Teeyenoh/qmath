@@ -1,7 +1,7 @@
 #include "Sequences.h"
 
 namespace QMath {
-	long Sequences::getFibonacciNumber(long n) {
-		return n == 1 ? 1 : n == 2 ? 2 : getFibonacciNumber(n - 2) + getFibonacciNumber(n - 1);
+	QLong Sequences::getFibonacciNumber(QLong n) {
+		return n == QLong(1) ? 1 : n == QLong(2) ? 2 : getFibonacciNumber(n - QLong(2)) + getFibonacciNumber(n - QLong(1));
 	}
 }

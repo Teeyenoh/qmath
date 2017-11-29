@@ -13,44 +13,95 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\pure">
+      <UniqueIdentifier>{5a500541-33da-4ae9-a015-48e47e6c9add}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\applied">
+      <UniqueIdentifier>{f426bb5a-29dc-400e-aae7-24fb8ecedcce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pure\numbers">
+      <UniqueIdentifier>{78aa96e2-cde3-4497-aefb-7cfddb7a9e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pure\geometry">
+      <UniqueIdentifier>{b1c87b64-49bd-49e6-8529-df401d530a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\applied\motion">
+      <UniqueIdentifier>{35adb9c6-8684-4316-8f0e-44af905e1cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\applied">
+      <UniqueIdentifier>{c0ebfe7b-cc86-4a00-82cc-4c04fcd65d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\applied\motion">
+      <UniqueIdentifier>{8edafcba-6ae2-40ae-adb6-4b77d15ee51c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pure">
+      <UniqueIdentifier>{443b354f-65a7-4a64-8165-776e8a1d3afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pure\geometry">
+      <UniqueIdentifier>{e61cc5af-0e62-465b-8de0-f11cb4ffe5f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pure\numbers">
+      <UniqueIdentifier>{d4140a27-f9ab-4964-8f57-e8db4e4754df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\applied\electricity">
+      <UniqueIdentifier>{9c538ee8-0db9-43d1-a8eb-bebfbd5eedda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\applied\electricity">
+      <UniqueIdentifier>{ea2bb89b-4780-4156-8733-2a17ea30fa22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Primes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Powers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Factors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sums.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sequences.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="QMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Factors.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Palindromes.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Powers.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Primes.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequences.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sums.h">
+      <Filter>Header Files\pure\numbers</Filter>
+    </ClInclude>
+    <ClInclude Include="Resistors.h">
+      <Filter>Header Files\applied\electricity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Primes.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Factors.cpp">
+      <Filter>Source Files\pure\numbers</Filter>
+    </ClCompile>
+    <ClCompile Include="Palindromes.cpp">
+      <Filter>Source Files\pure\numbers</Filter>
     </ClCompile>
     <ClCompile Include="Powers.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\pure\numbers</Filter>
     </ClCompile>
-    <ClCompile Include="Factors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sums.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Primes.cpp">
+      <Filter>Source Files\pure\numbers</Filter>
     </ClCompile>
     <ClCompile Include="Sequences.cpp">
+      <Filter>Source Files\pure\numbers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sums.cpp">
+      <Filter>Source Files\pure\numbers</Filter>
+    </ClCompile>
+    <ClCompile Include="Resistors.cpp">
+      <Filter>Source Files\applied\electricity</Filter>
+    </ClCompile>
+    <ClCompile Include="QMath.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
