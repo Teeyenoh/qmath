@@ -2,8 +2,6 @@ package uk.co.quarklike.qmath.pure.numbers;
 
 import java.util.HashMap;
 
-import uk.co.quarklike.qmath.pure.geometry.Square;
-
 public class Series {
 	/**
 	 * 
@@ -16,7 +14,7 @@ public class Series {
 	 * @return
 	 */
 	public static double shanksTransform_1(double a, double b, double c) {
-		double top = Square.square(c - b);
+		double top = Powers.square(c - b);
 		double bottom = (c - b) - (b - a);
 		return c - (top / bottom);
 	}

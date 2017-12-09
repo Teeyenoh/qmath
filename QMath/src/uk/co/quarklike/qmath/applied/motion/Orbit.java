@@ -1,8 +1,8 @@
 package uk.co.quarklike.qmath.applied.motion;
 
 import uk.co.quarklike.qmath.Const;
-import uk.co.quarklike.qmath.pure.geometry.Square;
 import uk.co.quarklike.qmath.pure.geometry.Trig;
+import uk.co.quarklike.qmath.pure.numbers.Powers;
 
 public class Orbit {
 	/**
@@ -15,8 +15,8 @@ public class Orbit {
 	 */
 	public static double getTimePeriod(double a, double M) {
 		// from "T = 2π root(a^3 / μ)"
-		double mu = Const.CONSTANT_NEWTON * M;
-		return 2 * Const.PI * Square.sqrt(Math.pow(a, 3) / mu);
+		double mu = Const.CONSTANT_GRAVITY * M;
+		return 2 * Const.PI * Powers.sqrt(Math.pow(a, 3) / mu);
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class Orbit {
 	}
 
 	private static double getTrueAnomaly(double ε, double a, double m, double t) {
-		return 2 * Trig.arctan(Square.sqrt(((1 + ε) / (1 - ε)) * Square.square(Trig.tan(getEccentricAnomaly(ε, a, m, t) / 2))));
+		return 2 * Trig.arctan(Powers.sqrt(((1 + ε) / (1 - ε)) * Powers.square(Trig.tan(getEccentricAnomaly(ε, a, m, t) / 2))));
 	}
 
 	public static double getRadius(double ε, double a, double m, double t) {

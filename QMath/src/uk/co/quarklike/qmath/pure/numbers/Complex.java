@@ -1,7 +1,5 @@
 package uk.co.quarklike.qmath.pure.numbers;
 
-import uk.co.quarklike.qmath.pure.geometry.Square;
-
 public class Complex {
 	private double _real, _imaginary;
 
@@ -18,8 +16,16 @@ public class Complex {
 		return _imaginary;
 	}
 
+	public boolean isReal() {
+		return _imaginary == 0;
+	}
+
+	public double toDouble() {
+		return getRealComp();
+	}
+
 	public double getMagnitude() {
-		return Square.sqrt(Square.square(_real) + Square.square(_imaginary));
+		return Powers.sqrt(Powers.square(_real) + Powers.square(_imaginary));
 	}
 
 	public Complex getConjugate() {
@@ -27,7 +33,7 @@ public class Complex {
 	}
 
 	public Complex getReciprocal() {
-		double den = Square.square(_real) + Square.square(_imaginary);
+		double den = Powers.square(_real) + Powers.square(_imaginary);
 		return new Complex(_real / den, -_imaginary / den);
 	}
 
@@ -54,8 +60,8 @@ public class Complex {
 		double b = _imaginary;
 		double c = toDivide.getRealComp();
 		double d = toDivide.getImagComp();
-		double real = ((a * c) + (b * d)) / (Square.square(c) + Square.square(d));
-		double imag = ((b * c) - (a * d)) / (Square.square(c) + Square.square(d));
+		double real = ((a * c) + (b * d)) / (Powers.square(c) + Powers.square(d));
+		double imag = ((b * c) - (a * d)) / (Powers.square(c) + Powers.square(d));
 		return new Complex(real, imag);
 	}
 

@@ -4,7 +4,8 @@ import java.text.NumberFormat;
 
 import uk.co.quarklike.qmath.applied.electrics.Resistivity;
 import uk.co.quarklike.qmath.chemistry.Enthalpy;
-import uk.co.quarklike.qmath.pure.numbers.Complex;
+import uk.co.quarklike.qmath.pure.numbers.algebra.Function;
+import uk.co.quarklike.qmath.pure.numbers.algebra.FunctionPolynomial;
 
 public class Debug {
 	private static boolean TIME = false;
@@ -29,7 +30,8 @@ public class Debug {
 	public static final void main(String[] args) {
 		init();
 
-		System.out.println(new Complex(10, -3).multiply(new Complex(4, -3)));
+		Function f = new FunctionPolynomial(1, 3, -5);
+		System.out.println(f.solve()[1]);
 
 		// System.exit(0);
 	}

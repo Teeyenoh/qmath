@@ -1,7 +1,6 @@
 package uk.co.quarklike.qmath.pure.numbers;
 
 import uk.co.quarklike.qmath.discrete.ArrayTools;
-import uk.co.quarklike.qmath.pure.geometry.Square;
 
 public class Factors {
 	public static long[] getPrimeFactors(long n) {
@@ -30,7 +29,7 @@ public class Factors {
 		long[] factors = new long[(int) n];
 		int nextFactor = 0;
 
-		double root = Square.sqrt(n);
+		double root = Powers.sqrt(n);
 		if ((int) root == root) {
 			factors[nextFactor] = (int) root;
 			nextFactor++;

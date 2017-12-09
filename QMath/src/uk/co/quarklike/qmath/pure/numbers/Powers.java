@@ -1,6 +1,6 @@
-package uk.co.quarklike.qmath.pure.geometry;
+package uk.co.quarklike.qmath.pure.numbers;
 
-public class Square {
+public class Powers {
 	public static long[] squares(int start, int end) {
 		long[] output = new long[end - start + 1];
 
@@ -17,6 +17,14 @@ public class Square {
 
 	public static double square(double num) {
 		return num * num;
+	}
+
+	public static Complex raiseToPower(Complex a, int b) {
+		Complex out = a;
+		for (int i = 0; i < b; i++) {
+			out = out.multiply(a);
+		}
+		return out;
 	}
 
 	/**

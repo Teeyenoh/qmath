@@ -3,6 +3,7 @@ package uk.co.quarklike.qmath.pure.geometry;
 import uk.co.quarklike.qmath.Const;
 import uk.co.quarklike.qmath.pure.numbers.Factorial;
 import uk.co.quarklike.qmath.pure.numbers.Series;
+import uk.co.quarklike.qmath.pure.numbers.Powers;
 import uk.co.quarklike.qmath.pure.numbers.Sum;
 
 public class Trig {
@@ -89,7 +90,7 @@ public class Trig {
 
 		for (int n = 0; n <= res; n++) {
 			double top = Factorial.factorial(2 * n);
-			double bottom = Math.pow(4, n) * Square.square(Factorial.factorial(n)) * ((2 * n) + 1);
+			double bottom = Math.pow(4, n) * Powers.square(Factorial.factorial(n)) * ((2 * n) + 1);
 			long power = (2 * n) + 1;
 			nums[n] = (top / bottom) * (Math.pow(x, power));
 		}

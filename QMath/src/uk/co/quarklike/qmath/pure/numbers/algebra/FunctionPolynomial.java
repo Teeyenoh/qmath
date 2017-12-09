@@ -1,7 +1,8 @@
 package uk.co.quarklike.qmath.pure.numbers.algebra;
 
 import uk.co.quarklike.qmath.discrete.ArrayTools;
-import uk.co.quarklike.qmath.pure.geometry.Square;
+import uk.co.quarklike.qmath.pure.numbers.Complex;
+import uk.co.quarklike.qmath.pure.numbers.Powers;
 
 public class FunctionPolynomial extends Function {
 	double[] coeffs;
@@ -15,29 +16,36 @@ public class FunctionPolynomial extends Function {
 	}
 
 	@Override
-	public double get(double in) {
-		double out = 0;
+	public Complex get(Complex in) {
+		Complex out = new Complex(0, 0);
 
 		for (int i = 0; i < coeffs.length; i++) {
 			int coeff = coeffs.length - i - 1;
-			out += (Math.pow(in, coeff) * coeffs[i]);
+			out = out.add(Powers.raiseToPower(in, coeff).multiply(new Complex(coeffs[i], 0)));
 		}
 
 		return out;
 	}
 
 	@Override
-	public double[] solve() {
+	public Complex[] solve() {
 		switch (coeffs.length) {
 		case 1:
 			return null;
 		case 2:
-			return new double[] { -getCoeff(1) / getCoeff(0) };
+			return new Complex[] { new Complex(-getCoeff(1) / getCoeff(0), 0) };
 		case 3:
 			double a = getCoeff(0);
 			double b = getCoeff(1);
 			double c = getCoeff(2);
-			return ArrayTools.removeDuplicates(new double[] { (-b + Math.sqrt(Square.square(b) - 4 * a * c)) / (2 * a), (-b - Math.sqrt(Square.square(b) - 4 * a * c)) / (2 * a) });
+			double det = Powers.square(b) - (4 * a * c);
+			if (det > 0) {
+				return new Complex[] { new Complex((-b + Math.sqrt(det)) / (2 * a), 0), new Complex((-b - Math.sqrt(det)) / (2 * a), 0) };
+			} else if (det == 0) {
+				return new Complex[] { new Complex((-b + Math.sqrt(det)) / (2 * a), 0) };
+			} else {
+				return new Complex[] { new Complex(-b / (2 * a), Powers.sqrt(-det) / (2 * a)), new Complex(-b / (2 * a), -Powers.sqrt(-det) / (2 * a)) };
+			}
 		default:
 			return null;
 		}
@@ -57,7 +65,7 @@ public class FunctionPolynomial extends Function {
 		String out = "";
 		for (int i = coeffs.length - 1; i > 0; i--) {
 			if (coeffs[i] != 0) {
-				out += coeffs[i] + "*x^" + i + " + ";
+				out += "(" + coeffs[i] + ")*x^" + i + " + ";
 			}
 		}
 
